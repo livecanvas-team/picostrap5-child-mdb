@@ -77,14 +77,17 @@
 }
 */ 
 
+//COMMENTED AS IT BREAKS IMAGES ON MDB
 img.wp-post-image,
 article img,
 figure,
-img,
+/*  img, */
 #secondary img {
 	max-width: 100%;
 	height: auto;
 }
+ 
+
 
 // Skip to content link
 a.skip-link {
