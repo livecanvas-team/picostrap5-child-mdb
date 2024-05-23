@@ -20,7 +20,7 @@ Welcome to the Picostrap5-Child-MDB project! This project is an open-source chil
 
 ## Introduction
 
-Picostrap5-Child-MDB is a powerful and flexible WordPress child theme designed to provide a seamless integration with the Material Design Bootstrap (MDB) framework. It inherits the core functionalities of the Picostrap5 theme while offering enhanced design components and utilities from MDB.
+Picostrap5-Child-MDB is a powerful and flexible WordPress child theme designed to provide a seamless integration with the Material Design Bootstrap (MDB) framework. It inherits the core functionalities of the [Picostrap5](https://picostrap.com/) theme while offering enhanced design components and utilities from MDB.
 
 ## Features
 
@@ -34,13 +34,13 @@ Picostrap5-Child-MDB is a powerful and flexible WordPress child theme designed t
 ## Requirements
 
 - WordPress 5.0 or higher
-- Picostrap5 theme (parent theme)
+- [Picostrap5 theme](https://picostrap.com/) (parent theme)
 - PHP 7.4 or higher
 - MySQL 5.6 or higher
 
 ## Installation
 
-1. **Download the Parent Theme**: Ensure you have the Picostrap5 theme installed and activated.
+1. **Download the Parent Theme**: Ensure you have the Picostrap5 theme installed and activated. If not, you can download it from the [https://picostrap.com/](https://picostrap.com/).
 2. **Download the Child Theme**: Clone or download this repository to your local machine.
     ```bash
     git clone https://github.com/livecanvas-team/picostrap5-child-mdb
