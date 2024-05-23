@@ -43,7 +43,7 @@ Picostrap5-Child-MDB is a powerful and flexible WordPress child theme designed t
 1. **Download the Parent Theme**: Ensure you have the Picostrap5 theme installed and activated.
 2. **Download the Child Theme**: Clone or download this repository to your local machine.
     ```bash
-    git clone https://github.com/yourusername/picostrap5-child-mdb.git
+    git clone https://github.com/livecanvas-team/picostrap5-child-mdb
     ```
 3. **Upload to WordPress**:
     - Navigate to `wp-content/themes/`.
