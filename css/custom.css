@@ -1,0 +1,394 @@
+/* ============  MAIN SITE HOME ============ */
+
+/* cool title gradient */
+
+.gradient_purple {
+  background: -webkit-linear-gradient(right, var(--bs-body-color) 30%, var(--bs-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-stroke: .03rem var(--bs-body-color)
+}
+
+/* First letter big */
+.content_bn::first-letter {
+  font-size: 4rem;
+  font-weight: 900;
+  margin-right: .03em;
+  line-height: 24px
+}
+
+/* Tweak for images and dark background  */
+.brightness {
+  filter: brightness(2)
+}
+
+
+/* Swiper Animations */
+
+.swiper-slide {
+  user-select: none
+}
+
+@media(min-width: 992px) {
+  .swiper-slide-active {
+    transform: scale(1.1);
+    transition-duration: .5s
+  }
+
+  .swiper-slide {
+    transition-duration: .5s
+  }
+}
+
+/* ============ MAIN NAVIGATION MENU ============ */
+
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color .3s
+}
+
+.navbar.scrolled {
+  background-color: var(--bs-white);
+  transition: background-color .3s
+}
+
+.collapse.scrolled {
+  background-color: var(--bs-white);
+  transition: background-color .3s
+}
+
+.navbar.scrolled {
+  background-color: var(--bs-white);
+  transition: background-color .3s
+}
+
+
+.navbar:not(.scrolled) .navbar-collapse.show {
+  background-color: var(--bs-body-bg);
+  transition: background-color .1s
+}
+
+
+
+/* CUSTOMIZATION FOR UI BOOTSTRAP */
+
+
+.btn_gradient {
+  background: linear-gradient(120deg, rgba(var(--bs-light-rgb), 1), rgba(var(--bs-dark-rgb), 1));
+  border: rgba(0, 0, 0, 0);
+  border-width: 0px !important;
+  transition: background .4s ease
+}
+
+/* Added 'ease' for a smooth transition effect */
+
+.btn_gradient:hover {
+  border-width: 0px !important;
+}
+
+.border-gradient-purple {
+  border: var(--bs-border-width) solid rgba(0, 0, 0, 0);
+  background: linear-gradient(var(--bs-body-bg), var(--bs-body-bg)) padding-box, linear-gradient(120deg, var(--bs-light), var(--bs-dark)) border-box
+}
+
+
+
+/* ============ COMPONENTS PAGE  ============ */
+
+.components .col .card {
+  transition-duration: .1s
+}
+
+.components .col .card:hover .img-fluid {
+  transition-duration: .2s
+}
+
+.components .col .card:hover h3,
+.components .col .card:hover .h3 {
+  color: var(--bs-primary);
+  transition-duration: .2s
+}
+
+.components .col .card:hover {
+  transform: scale(1.02);
+  transition-duration: .2s
+}
+
+.gradient_card {
+  background: linear-gradient(67deg, #fff 2.18%, rgba(255, 255, 255, 0.64) 28.19%, rgba(255, 255, 255, 0.06) 43.75%, rgba(255, 255, 255, 0) 95.48%)
+}
+
+.previewer .nav-tabs {
+  border: 0 !important
+}
+
+.previewer ul li button {
+  background: #fff;
+  color: var(--bs-body-color)
+}
+
+.previewer ul li button:active {
+  background: #fff;
+  color: var(--bs-body-color)
+}
+
+/* ============  COMPONENT PAGE - category loop  ============ */
+
+/* Quick and dirty solution */
+.live-shortcode #myTabContent section {
+  padding-right: 1.5rem !important;
+  padding-left: 1.5rem !important;
+
+}
+
+/* BANNER CATEGORY ELEMENTS FIXING */
+/* Remove the fixed bottom behaviour */
+
+
+#preview-tab-3561-pane section,
+#preview-tab-3550-pane section,
+#preview-tab-3567-pane section,
+#preview-tab-3573-pane section,
+#preview-tab-3588-pane section,
+#preview-tab-3592-pane section,
+#preview-tab-3596-pane section {
+  position: relative !important
+}
+
+/* HEADERS CATEGORY ELEMENTS FIXING */
+/* Add a good height */
+#preview-tab-2919-pane,
+#preview-tab-3805-pane,
+#preview-tab-3794-pane,
+#preview-tab-3785-pane,
+#preview-tab-3870-pane,
+#preview-tab-3922-pane,
+#preview-tab-3914-pane,
+#preview-tab-3892-pane {
+  overflow-y: scroll;
+  min-height: 500px
+}
+
+
+
+/**/
+/**/
+/**/
+/* ============  UI Customize Button ============ */
+/**/
+/**/
+/**/
+
+
+.customizer-button-ninja {
+  border-radius: 0.375rem 0 0 0.375rem;
+  margin-right: 2px;
+  position: fixed;
+  top: 18%;
+  right: -10px;
+  z-index: 1000;
+  box-shadow: #333 1px 1px 15px;
+
+
+  background: linear-gradient(120deg, rgba(var(--bs-dark-rgb), 1), rgba(var(--bs-light-rgb), 1));
+  border: rgba(0, 0, 0, 0);
+  border-width: 0px !important;
+  transition: background .4s ease;
+  color: #effef0 !important;
+
+  &:hover svg {
+    animation: rotateAnimation .4s ease-in-out 1;
+  }
+}
+
+@keyframes rotateAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+/* applies to x-small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .customizer-button-ninja {
+    bottom: 10px !important;
+    left: 50% !important;
+  }
+}
+
+
+.customizer-button-ninja-downloader {
+  border-radius: 0.375rem 0 0 0.375rem;
+  font-family: tahoma;
+  margin-top: 95px;
+  margin-right: 2px;
+  position: fixed;
+  top: 0;
+  right: -10px;
+  z-index: 1000;
+  box-shadow: #333 1px 1px 15px;
+}
+
+/* UI sidebar */
+
+#ui_ninja_customizer {
+  --bs-accordion-border-width: 0 !important;
+  --bs-accordion-bg: var(--bs-body-bg) !important;
+  --bs-accordion-bg: var(--bs-body-bg) !important;
+
+  --bs-accordion-active-color: var(--bs-dark);
+  --bs-accordion-active-bg: var(--bs-body-bg);
+
+  --bs-accordion-btn-icon: url('data:image/svg+xml,<svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" /></svg>');
+  --bs-accordion-btn-active-icon: url('data:image/svg+xml,<svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>minus</title><path d="M19,13H5V11H19V13Z" /></svg>');
+  --bs-accordion-btn-focus-border-color: transparent;
+  --bs-accordion-btn-focus-box-shadow: none;
+}
+
+
+/* UI sidbar buttons */
+/*prevents button link*/
+#ui_ninja_customizer_buttons_container div button.btn {
+  pointer-events: none !important;
+}
+
+/* Buttons presets TO DO */
+
+#ui_ninja_customizer_buttons {
+  .btn_1 .btn {
+    padding: 1px;
+  }
+
+  .btn_2 .btn {
+    border-radius: 0 !important;
+  }
+
+  .btn_3 .btn {
+    padding: 0.5rem 3rem !important;
+  }
+}
+
+#ui_ninja_customizer {
+  input[type="color"] {
+    width: 48px
+  }
+}
+
+
+
+/**/
+/**/
+/**/
+/**/
+/* ============ DARK MODE ============ */
+/* ============ USELESS ============ */
+
+
+html[data-bs-theme=dark] .navbar.scrolled {
+  background-color: var(--bs-dark)
+}
+
+
+html[data-bs-theme=dark] .text-black {
+  color: #fff !important
+}
+
+html[data-bs-theme=dark] .text-white {
+  color: #000 !important
+}
+
+html[data-bs-theme=dark] .custom-logo {
+  filter: brightness(2)
+}
+
+html[data-bs-theme=dark] .dark_mode_img {
+  filter: brightness(2)
+}
+
+html[data-bs-theme=dark] .bg_dark_mode {
+  background: var(--bs-dark)
+}
+
+html[data-bs-theme=dark] h2,
+html[data-bs-theme=dark] .h2,
+html[data-bs-theme=dark] h3,
+html[data-bs-theme=dark] .h3 {
+  filter: brightness(4)
+}
+
+html[data-bs-theme=dark] h2,
+html[data-bs-theme=dark] .h2,
+html[data-bs-theme=dark] h3,
+html[data-bs-theme=dark] .h3 {
+  filter: brightness(4)
+}
+
+html[data-bs-theme=dark] a.back_to_home {
+  filter: brightness(6)
+}
+
+html[data-bs-theme=dark] .gradient_card {
+  background: linear-gradient(67deg, hsl(264, 27%, 24%) 2.18%, rgb(43, 34, 54) 28.19%, rgba(39, 39, 42, 0) 43.75%, rgba(0, 0, 0, 0) 95.48%) !important
+}
+
+html[data-bs-theme=dark] .btn-outline-dark {
+  filter: brightness(2)
+}
+
+html[data-bs-theme=dark] .npm_button {
+  filter: brightness(3)
+}
+
+html[data-bs-theme=dark] .npm_button .npm_button_svg {
+  fill: var(--bs-purple)
+}
+
+#dark_mode_switch .toggle {
+  background-color: var(--bs-body);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 0 50px 20px rgba(0, 0, 0, .1);
+  line-height: 1
+}
+
+html[data-bs-theme=dark] #dark_mode_switch .toggle {
+  background-color: var(--bs-dark)
+}
+
+#dark_mode_switch input {
+  display: none
+}
+
+#dark_mode_switch .icon {
+  grid-column: 1/1;
+  grid-row: 1/1;
+  transition: transform 500ms
+}
+
+#dark_mode_switch .icon--moon {
+  transform: scale(0)
+}
+
+#dark_mode_switch .icon--sun {
+  transition-delay: 200ms
+}
+
+#dark_mode_switch #theme-toggle:checked+.icon--sun {
+  transform: rotate(360deg) scale(0)
+}
+
+#dark_mode_switch #theme-toggle:checked~.icon--moon {
+  transition-delay: 200ms;
+  transform: scale(1) rotate(360deg)
+}

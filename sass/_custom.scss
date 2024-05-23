@@ -1,0 +1,318 @@
+/* ============  MAIN SITE HOME ============ */
+
+/* cool title gradient */
+.gradient_purple {
+  background: -webkit-linear-gradient(
+    right,
+    var(--bs-body-color) 30%,
+    var(--bs-light)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+	-webkit-text-stroke: 0.03rem var(--bs-body-color);
+}
+
+/* First letter big */
+.content_bn::first-letter {
+  font-size: 4rem;
+  font-weight: 900;
+  margin-right: 0.03em;
+  line-height: 24px;
+}
+
+/* Swiper Animations */
+
+
+.swiper-slide { user-select: none;}
+
+@include media-breakpoint-up(lg) {
+  .swiper-slide-active {
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+  }
+  .swiper-slide {
+    transition-duration: 0.5s;
+  }
+}
+
+/* ============ MAIN NAVIGATION MENU ============ */
+
+/* Navbar is fixed on top */
+.navbar {
+  background-color: transparent;
+  transition: background-color 0.3s;
+}
+
+/* Navbar is scrolled */
+.navbar.scrolled {
+  background-color: var(--bs-white);
+  transition: background-color 0.3s;
+}
+
+/* Collapse is scrolled */
+.collapse.scrolled {
+  background-color: var(--bs-white);
+  transition: background-color 0.3s;
+}
+
+/* Navbar is scrolled */
+.navbar.scrolled {
+  background-color: var(--bs-white);
+  transition: background-color 0.3s;
+}
+
+/* Navbar is scrolled in dark mode */
+html[data-bs-theme="dark"] .navbar.scrolled {
+  background-color: var(--bs-dark);
+}
+
+/* Navbar is not scrolled and collapse.show */
+.navbar:not(.scrolled) .navbar-collapse.show {
+  background-color: var(--bs-body-bg);
+  transition: background-color 0.1s;
+}
+
+/* ============ DARK MODE ============ */
+
+html[data-bs-theme="dark"] .text-black {
+  color: white !important;
+}
+
+html[data-bs-theme="dark"] .text-white {
+  color: black !important;
+}
+
+/* Logo Navbar brand */
+html[data-bs-theme="dark"] .custom-logo {
+  filter: brightness(2);
+}
+
+/* Images */
+
+html[data-bs-theme="dark"] .dark_mode_img {
+  filter: brightness(2);
+}
+
+/* Background area */
+html[data-bs-theme="dark"] .bg_dark_mode {
+  background: var(--bs-dark);
+}
+
+/* Headings */
+html[data-bs-theme="dark"] h2,
+html[data-bs-theme="dark"] h3 {
+  filter: brightness(4);
+}
+
+html[data-bs-theme="dark"] h2,
+html[data-bs-theme="dark"] h3 {
+  filter: brightness(4);
+}
+
+/* Article link back to home */
+html[data-bs-theme="dark"] a.back_to_home {
+  filter: brightness(6);
+}
+/* Cards in Home */
+html[data-bs-theme="dark"] .gradient_card {
+  background: linear-gradient(
+    67deg,
+    hsl(264 27% 24% / 1) 2.18%,
+    rgb(43 34 54) 28.19%,
+    rgb(39 39 42 / 0%) 43.75%,
+    rgb(0 0 0 / 0%) 95.48%
+  ) !important;
+}
+
+/* Buttons  */
+html[data-bs-theme="dark"] .btn-outline-dark {
+  filter: brightness(2);
+}
+
+/* Buttons NPM  */
+html[data-bs-theme="dark"] .npm_button {
+  filter: brightness(3);
+
+  .npm_button_svg {
+    fill: var(--bs-purple);
+  }
+}
+
+/* ============ SWITCH TOGGLE ============ */
+#dark_mode_switch .toggle {
+  background-color: var(--bs-body);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 0 50px 20px rgba(0, 0, 0, 0.1);
+  line-height: 1;
+}
+
+html[data-bs-theme="dark"] #dark_mode_switch .toggle {
+  background-color: var(--bs-dark);
+}
+
+#dark_mode_switch input {
+  display: none;
+}
+
+#dark_mode_switch .icon {
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
+  transition: transform 500ms;
+}
+
+#dark_mode_switch .icon--moon {
+  transform: scale(0);
+}
+
+#dark_mode_switch .icon--sun {
+  transition-delay: 200ms;
+}
+
+#dark_mode_switch #theme-toggle:checked + .icon--sun {
+  transform: rotate(360deg) scale(0);
+}
+
+#dark_mode_switch #theme-toggle:checked ~ .icon--moon {
+  transition-delay: 200ms;
+  transform: scale(1) rotate(360deg);
+}
+
+ 
+
+//
+//
+//
+// NEW CUSTOMIZATION FOR UI BOOTSTRAP
+
+.btn_gradient {
+  background: linear-gradient(
+    120deg,
+    rgba(var(--bs-light-rgb), 1),
+    rgba(var(--bs-dark-rgb), 1)
+  );
+  border: transparent;
+  transition: background 0.4s ease;
+  /* Added 'ease' for a smooth transition effect */
+}
+.btn_gradient:hover {
+  background-position: 100%;
+}
+
+.border-gradient-purple {
+  border: var(--bs-border-width) solid transparent;
+  background: linear-gradient(var(--bs-body-bg), var(--bs-body-bg)) padding-box,
+    /* inner background */
+      linear-gradient(120deg, var(--bs-light), var(--bs-dark)) border-box;
+}
+
+.brightness {
+  filter: brightness(2);
+}
+
+/* SORRY does not support firefox 
+.tab-content {
+	zoom: 0.9;
+	-ms-zoom: (0.9);
+	-webkit-zoom: 0.9;
+}
+*/
+
+// Quick solution
+.live-shortcode #myTabContent section {
+  @extend .px-4;
+}
+
+/* COMPONENTS */
+
+.components .col .card {
+  transition-duration: 0.1s;
+  .card-body {
+    @extend .ps-0;
+  }
+}
+.components .col .card:hover .img-fluid {
+  transition-duration: 0.2s;
+  @extend .border-primary, .shadow-sm;
+}
+.components .col .card:hover h3 {
+  color: var(--bs-primary);
+  transition-duration: 0.2s;
+}
+
+.components .col .card:hover {
+  transform: scale(1.02);
+  transition-duration: 0.2s;
+}
+
+.components .col .card svg.img-fluid {
+  @extend .mx-auto, .col-10, .col-sm-11, .col-md-10;
+}
+
+// OTHER STUFF
+
+.gradient_card {
+  background: linear-gradient(
+    67deg,
+    #fff 2.18%,
+    rgba(255, 255, 255, 0.64) 28.19%,
+    rgba(255, 255, 255, 0.06) 43.75%,
+    rgba(255, 255, 255, 0) 95.48%
+  );
+}
+
+.previewer {
+  .nav-tabs {
+    border: 0 !important;
+  }
+
+  ul li button {
+    background: white;
+    color: var(--bs-body-color);
+  }
+
+  ul li button:active {
+    background: white;
+    color: var(--bs-body-color);
+  }
+}
+
+
+
+
+/* BANNER ELEMENTS FIXING */
+/* Remove the fixed bottom behaviour */
+
+#preview-tab-3561-pane section, 
+#preview-tab-3550-pane section,
+#preview-tab-3567-pane section,
+#preview-tab-3573-pane section,
+#preview-tab-3588-pane section,
+#preview-tab-3592-pane section,
+#preview-tab-3596-pane section {
+	  position:relative !important 
+}
+
+/* HEADERS ELEMENTS FIXING */
+/* Add a good height */
+
+#preview-tab-2919-pane,
+#preview-tab-3805-pane,
+#preview-tab-3794-pane,
+#preview-tab-3785-pane,
+#preview-tab-3870-pane,
+#preview-tab-3922-pane,
+#preview-tab-3914-pane,
+#preview-tab-3892-pane {
+ 	overflow-y:scroll;	
+	min-height:500px;
+	
+}
+
+ 
+
+
